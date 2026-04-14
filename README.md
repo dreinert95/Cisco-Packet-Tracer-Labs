@@ -55,3 +55,6 @@ Connect Devices:
    *Connect Attacker to The Internet
    
 4. Click "Cancel" on "Automatically Choose Connection Type"
+
+# Lab 2
+
