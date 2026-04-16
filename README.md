@@ -132,3 +132,82 @@ fiber connections
    *R1 and R3 are 3 kilometers apart, therefore we must use a fiber-optic cable (single-mode permits distances of 100+ kilometers. multi-mode permits distances of 550 meters)
 
    *R3 and R4 are 250 meters apart. This distance is too far for a UTP cable, but not so long that we need single-mode fiber. Therefore, we will use a multi-mode fiber cable.
+
+
+# Lab 3
+
+**Objective:** 
+  
+  Examine network traffic using packet tracer's 'simulation mode'
+
+  Identify which layers of the OSI Model are being used
+
+  Release and renew PC1's IP address to generate some Layer 7 traffic. Then analyze the traffic with simulation mode.
+
+**Devices:**
+
+Cisco 2911 routers (x2)
+
+Cisco 2960 switches (x2)
+
+Server (x1)
+
+PC (x1)
+
+**Network Interfaces:**
+
+G0/0
+
+G0/1
+
+G0/2
+
+F0/1
+
+"G" - gigabit ethernet. these interfaces operate at a speed of one gigabit per second
+
+"F" - fastethernet. these interfaces operate at 100 megabits per second
+
+**Network Addresses:**
+
+192.168.1.0/24
+
+10.0.0.0/24
+
+# routers are used to connect different networks. there are two networks displayed in the lab diagram
+
+  *Network Address 192.168.1.0/24 --> SRV1, PC1, SW1, SW2 and R1's G0/0 interface
+  
+  *SRV1 '.100' means that its IP address is 192.168.1.100
+  
+  *R1 '.1' means that its IP address is 192.168.1.1
+
+  *Network Address 10.0.0.0/24 --> R1's G0/1 interface and R2's G0/0 interface
+  
+  *R1 '.1' means that its IP address is 10.0.0.1
+  
+  *R2 '.1.' means that its IP address is 10.0.0.2
+
+**Simulation mode:**
+
+*Activate 'Simulation mode' in the bottom right-hand corner with the 'Simulation' button
+
+*Utilize the 'Play Controls' to see various network traffic being sent around
+
+**Network Traffic Analysis via Simulation Panel:**
+
+*At Device 2 means that SW2 is the one sending out the data
+
+*Type STP - STP is the Spanning-Tree Protocol (Layer 2)
+
+*Out Layers:
+  
+  Layer 2: IEEE 802.3 Header 0001.C70E.BD19>>0180.C200.0000 LLC STP BPDU
+
+    *IEEE 802.3 is the standard number for Ethernet. Therefore this is an Ethernet Layer 2 Header
+
+  Layer 1: Port(s): FastEthernet0/1 GigabitEthernet0/1
+
+    *The information is the two interfaces that it sends the frame out of.
+
+    *Information like the physical ports, or interfaces, on a device are Layer 1 information because it is the physical layer
