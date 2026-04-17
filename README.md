@@ -241,3 +241,7 @@ F0/1
   *type 'ipconfig /renew' to renew the IP address
 
   *You will see information all the way up to Layer 7, except Layers 5 and 6. This is because in the TCP/IP model (the model actually in use) Layers 5, 6 and 7 are all combined into a single layer called the Application Layer. Therefore, you will not see any Layer 5 or Layer 6 information, but you can consider it to be part of the Layer 7 information.
+
+# Lab 4 - Basic Device Security
+
+This lab will be hands on in the Cisco IOS CLI (Command Line Interface)
