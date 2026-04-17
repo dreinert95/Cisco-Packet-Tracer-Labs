@@ -5,7 +5,7 @@ This repository features a collection of hands-on Cisco Packet Tracer projects t
 	
 https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbnZ1M1NhUXp3QkdZaGF4dnFDYkRONm91ck1XZ3xBQ3Jtc0tscFAwbVBBWnhNQW0tZ0RQMHNGZ2pzQWE2TG1UazZsdnFSbWZLWnJQTGJHdmIwN1NaRnNiNF8wcWxMNnloa2c4OW9kbXdBeGdBbW43d3dUREowRkhJUnhIOTJZR0RBZUhRWlBQb3JmQ2JlUU51a19Ddw&q=https%3A%2F%2Fjitl.jp%2Fccna-files&v=H8W9oMNSuwo
 
-# Lab 1 - Introduction to Cisco Packet Tracer
+#  	:satellite: Lab 1 - Introduction to Cisco Packet Tracer
 **Devices used:**
 
 Cisco 2911 routers (x2)
@@ -64,7 +64,7 @@ Laptop (Attacker)
    
 4. Click "Cancel" on "Automatically Choose Connection Type"
 
-# Lab 2 - Connecting Devices
+#  	:satellite: Lab 2 - Connecting Devices
 
 **Objective:** Connect the network devices together according to the labels. Use the appropriate type of cable. For practice, assume that Auto MDI-X is disabled or not supported.
 
@@ -136,7 +136,7 @@ fiber connections
    *R3 and R4 are 250 meters apart. This distance is too far for a UTP cable, but not so long that we need single-mode fiber. Therefore, we will use a multi-mode fiber cable.
 
 
-# Lab 3 - OSI Model
+#  	:satellite: Lab 3 - OSI Model
 
 **Objective:** 
   
@@ -176,7 +176,7 @@ F0/1
 
 10.0.0.0/24
 
-# routers are used to connect different networks. there are two networks displayed in the lab diagram
+# :trackball: routers are used to connect different networks. there are two networks displayed in the lab diagram
 
   *Network Address 192.168.1.0/24 --> SRV1, PC1, SW1, SW2 and R1's G0/0 interface
   
@@ -244,7 +244,7 @@ F0/1
 
   *You will see information all the way up to Layer 7, except Layers 5 and 6. This is because in the TCP/IP model (the model actually in use) Layers 5, 6 and 7 are all combined into a single layer called the Application Layer. Therefore, you will not see any Layer 5 or Layer 6 information, but you can consider it to be part of the Layer 7 information.
 
-# Lab 4 - Basic Device Security
+#  	:satellite: Lab 4 - Basic Device Security
 
 This lab will be hands on in the Cisco IOS CLI (Command Line Interface)
 
