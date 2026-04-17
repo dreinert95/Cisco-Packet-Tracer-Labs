@@ -3,7 +3,7 @@ This repository features a collection of hands-on Cisco Packet Tracer projects t
 
 # ALL OF THESE LABS BELONG TO JEREMY'S IT LAB. THESE ARE LABS THAT I HAVE FOLLOWED ALONG WITH FROM HIS YOUTUBE VIDEOS THAT CAN BE FOUND HERE --> https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbnZ1M1NhUXp3QkdZaGF4dnFDYkRONm91ck1XZ3xBQ3Jtc0tscFAwbVBBWnhNQW0tZ0RQMHNGZ2pzQWE2TG1UazZsdnFSbWZLWnJQTGJHdmIwN1NaRnNiNF8wcWxMNnloa2c4OW9kbXdBeGdBbW43d3dUREowRkhJUnhIOTJZR0RBZUhRWlBQb3JmQ2JlUU51a19Ddw&q=https%3A%2F%2Fjitl.jp%2Fccna-files&v=H8W9oMNSuwo
 
-# Lab 1
+# Lab 1 - Introduction to Cisco Packet Tracer
 **Devices used:**
 
 Cisco 2911 routers (x2)
@@ -62,7 +62,7 @@ Laptop (Attacker)
    
 4. Click "Cancel" on "Automatically Choose Connection Type"
 
-# Lab 2
+# Lab 2 - Connecting Devices
 
 **Objective:** Connect the network devices together according to the labels. Use the appropriate type of cable. For practice, assume that Auto MDI-X is disabled or not supported.
 
@@ -134,7 +134,7 @@ fiber connections
    *R3 and R4 are 250 meters apart. This distance is too far for a UTP cable, but not so long that we need single-mode fiber. Therefore, we will use a multi-mode fiber cable.
 
 
-# Lab 3
+# Lab 3 - OSI Model
 
 **Objective:** 
   
