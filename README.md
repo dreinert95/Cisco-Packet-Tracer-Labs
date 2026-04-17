@@ -176,7 +176,7 @@ F0/1
 
 10.0.0.0/24
 
-# <img width="1280" height="868" alt="Image" src="https://github.com/user-attachments/assets/074ab1d4-5c59-4afe-b0fd-2a0ccc7b3545" /> routers are used to connect different networks. there are two networks displayed in the lab diagram
+# routers are used to connect different networks. there are two networks displayed in the lab diagram
 
   *Network Address 192.168.1.0/24 --> SRV1, PC1, SW1, SW2 and R1's G0/0 interface
   
