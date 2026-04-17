@@ -1,7 +1,9 @@
 # Cisco-Packet-Tracer-Labs
 This repository features a collection of hands-on Cisco Packet Tracer projects that reflect my growth, skills, and practical experience as I progress on my journey to becoming a network engineer.
 
-# ALL OF THESE LABS BELONG TO JEREMY'S IT LAB. THESE ARE LABS THAT I HAVE FOLLOWED ALONG WITH FROM HIS YOUTUBE VIDEOS THAT CAN BE FOUND HERE --> https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbnZ1M1NhUXp3QkdZaGF4dnFDYkRONm91ck1XZ3xBQ3Jtc0tscFAwbVBBWnhNQW0tZ0RQMHNGZ2pzQWE2TG1UazZsdnFSbWZLWnJQTGJHdmIwN1NaRnNiNF8wcWxMNnloa2c4OW9kbXdBeGdBbW43d3dUREowRkhJUnhIOTJZR0RBZUhRWlBQb3JmQ2JlUU51a19Ddw&q=https%3A%2F%2Fjitl.jp%2Fccna-files&v=H8W9oMNSuwo
+# ALL OF THESE LABS BELONG TO JEREMY'S IT LAB. THESE ARE LABS THAT I HAVE FOLLOWED ALONG WITH FROM HIS YOUTUBE VIDEOS THAT CAN BE FOUND via URL: 
+	
+https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbnZ1M1NhUXp3QkdZaGF4dnFDYkRONm91ck1XZ3xBQ3Jtc0tscFAwbVBBWnhNQW0tZ0RQMHNGZ2pzQWE2TG1UazZsdnFSbWZLWnJQTGJHdmIwN1NaRnNiNF8wcWxMNnloa2c4OW9kbXdBeGdBbW43d3dUREowRkhJUnhIOTJZR0RBZUhRWlBQb3JmQ2JlUU51a19Ddw&q=https%3A%2F%2Fjitl.jp%2Fccna-files&v=H8W9oMNSuwo
 
 # Lab 1 - Introduction to Cisco Packet Tracer
 **Devices used:**
@@ -252,26 +254,46 @@ This lab will be hands on in the Cisco IOS CLI (Command Line Interface)
 
    ##Use the 'hostname' command in global configuration mode##
 
-3.  Configure an unencrypted enable password of 'CCNA' on both devices
+2.  Configure an unencrypted enable password of 'CCNA' on both devices
 
-4. Exit back to user EXEC mode and test the password
+3. Exit back to user EXEC mode and test the password
 
-5.  View the password in the running configuration
+4.  View the password in the running configuration
 
-6. Ensure that the current password, and all future passwords, are encrypted
+5. Ensure that the current password, and all future passwords, are encrypted
 
-7. View the password in the running configuration
+6. View the password in the running configuration
 
-8. Configure a more secure, encrypted enable password of 'Cisco' on both devices
+7. Configure a more secure, encrypted enable password of 'Cisco' on both devices
 
-9. Exit back to user EXEC mode and then return to privileged EXEC mode.
+8. Exit back to user EXEC mode and then return to privileged EXEC mode.
 
     Which password do you have to use?
 
-11. View the passwords in the running configuration.
+9. View the passwords in the running configuration.
 
     What encryption type number is used for the encrypted 'enable password'?
 
     What encryption type number is used for the encrypted 'enable secret'?
 
-12. Save the running configuration to the startup configuration
+10. Save the running configuration to the startup configuration
+
+**Step 1:**
+
+  - click on R1 --> CLI --> Enter
+  - the default name of the device is 'Router'. to change the hostname, you have to enter 'Global Configuration Mode'.
+  - to enter 'Global Configuration Mode', you first have to enter 'Privileged EXEC Mode'
+  - use the 'enable' command to enter 'Privileged EXEC Mode'
+
+  - use the 'configure terminal' command to enter 'Global Configuration Mode'
+  - use the 'hostname' command to change the hostname of the device
+  - 	Router(config)#hostname R1
+
+  - click on SW1 --> CLI --> Enter
+  - the default name of the device is 'Switch'. to change the hostname, you have to enter 'Global Configuration Mode'.
+  - to enter 'Global Configuration Mode', you first have to enter 'Privileged EXEC Mode'
+  - use the 'enable' command to enter 'Privileged EXEC Mode'
+
+  - use the 'configure terminal' command to enter 'Global Configuration Mode'
+  - use the 'hostname' command to change the hostname of the device
+  - 	Switch(config)#hostname SW1
