@@ -361,6 +361,7 @@ This lab will be hands on in the Cisco IOS CLI (Command Line Interface)
 
 - Use the 'enable secret' command to configure a more secure password
 	- The 'enable secret' command uses MD5 encryption, which is more secure than the 'service password-encryption' command that uses Type 7 encryption.
+ 	- MD5 (message-digest algorithm 5) encryption is a cryptographic hash that is used to generate and verify digital signatures or message digests
 
 			- R1(config)#enable secret Cisco
  			- R1(config)#do show running-config
