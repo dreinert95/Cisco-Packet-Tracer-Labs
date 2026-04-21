@@ -275,7 +275,7 @@ This lab will be hands on in the Cisco IOS CLI (Command Line Interface)
 
 10. Save the running configuration to the startup configuration
 
-**Step 1:**
+**Step 1: Change the hostnames of the router and switch to the appropriate names (R1, SW1)**
 
   - click on R1 --> CLI --> Enter
   - the default name of the device is 'Router'. to change the hostname, you have to enter 'Global Configuration Mode'.
@@ -290,7 +290,104 @@ This lab will be hands on in the Cisco IOS CLI (Command Line Interface)
   - the default name of the device is 'Switch'. to change the hostname, you have to enter 'Global Configuration Mode'.
   - to enter 'Global Configuration Mode', you first have to enter 'Privileged EXEC Mode'
   - use the 'enable' command to enter 'Privileged EXEC Mode'
+  - the 'enable' command can be shortened to 'en'
 
   - use the 'configure terminal' command to enter 'Global Configuration Mode'
+  - the 'configure terminal' command can be shortened to 'conf t'
   - use the 'hostname' command to change the hostname of the device
   - 	Switch(config)#hostname SW1
+
+**Step 2: Configure an unencrypted enable password of 'CCNA' on both devices**
+
+- The 'enable password' is used to enter 'Privileged EXEC Mode', which is also called 'enable mode'
+	- In Step 1 we had no password set, therefore we were able to enter 'Pivileged EXEC Mode' without any password.
+- Protect 'Privileged EXEC Mode' so that only administrators can access it. The command must be entered in 'Global Configuration Mode'
+- Use the command 'enable password' followed by the password you want to set
+
+		- R1(config)#enable password CCNA
+
+**Step 3: Exit back to user EXEC mode and test the password**
+
+- Exit back to 'User EXEC Mode' and test the password
+- Use the 'exit' command twice. Once will return you to 'Privileged EXEC Mode' and once again will return you to 'User EXEC Mode'
+- Use the 'enable' command and you will be prompted to enter a password
+- Passwords are CASE SENSITIVE. The characters will not appear on the screen as you type
+
+		- R1>enable
+		- Password:
+		- R1#
+- If you enter the password incorrectly three times, you will be rejected for 'Bad secrets'
+
+		- R1>enable
+		- Password:
+		- Password:
+		- Password:
+		- % Bad Secrets
+		- R1>
+
+**Step 4: View the password in the running configuration**
+
+- The running configuration is the current active configuration of the router, whether or not you have actually saved it. If you turn off the router without saving the running configuration, you will lose any changes that you have made.
+- If you want to keep your changes, you have to save them to the startup configuration.
+- To view the running configuration, use the 'show running-config' command from 'Privileged EXEC Mode'
+- The 'show running-config' command can be shortened to 'sh run'
+		
+		- R1#show running-config
+
+**Step 5: Ensure that the current password, and all future passwords, are encrypted**
+
+- Passwords can be protected by encrypting them to render them unreadable
+- This is done in 'Global Configuration Mode'
+- Use the command 'service password-encryption'
+- The command 'service password-encryption' can be shortened to 'service pass'
+
+		- R1#configure terminal
+		- R1(config)#service password-encryption
+		- R1(config)#
+
+**Step 6: View the password in the running configuration**
+
+- The 'show running-config' command will not work to check the password. This is because we ran the command in 'Global Configuration Mode' and it must be ran in 'Privileged EXEC Mode'
+- Use 'do' in front of the command to run it in 'Global Configuration Mode'
+
+		- R1(config)#do show running-config
+
+- Now enable password returns 'enable password 7 08026F6028'
+	- This indicates that the password has successfully been encrypted
+	- The '7' refers to the type of encryption used
+	- Type 7 encryption is a simple, reversible algorithm based on XOR encoding. Type 7 passwords can be easily decrypted using publicly available tools or scripts.
+
+**Step 7: Configure a more secure, encrypted enable password of 'Cisco' on both devices**
+
+- Use the 'enable secret' command to configure a more secure password
+	- The 'enable secret' command uses MD5 encryption, which is more secure than the 'service password-encryption' command that uses Type 7 encryption.
+
+			- R1(config)#enable secret Cisco
+ 			- R1(config)#do show running-config
+
+- Now there will be two lines with 'enable password'
+	- enable secret 5 $1$mERr$YlCkLMcTYWwkF1Ccndtll.
+	- enable password 7 08026F6028
+
+**Step 8: Exit back to user EXEC mode and then return to privileged EXEC mode**
+
+- If both 'enable secret' and 'enable password' are configured, only the 'enable secret' can be used. The 'enable password' becomes invalid.
+
+**Step 9: View the passwords in the running configuration.**
+
+- 'enable password' uses Type 7 encryption
+- 'enable secret' uses MD5 encryption
+
+**Step 10: Save the running configuration to the startup configuration**
+
+- There are three ways to save the running configuration to the startup configuration
+
+		- R1#write
+		- R1#write memory
+		- R1#copy running-config startup-config
+
+- Now check to see if the running configuration has been saved as the startup configuration
+
+		- R1#show startup-config
+
+- There's the configuration and you can also see the passwords that were just configured
