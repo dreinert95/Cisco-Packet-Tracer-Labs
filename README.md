@@ -1,5 +1,5 @@
 # Jeremy's-IT-Lab-Cisco-Packet-Tracer-Labs
-This repository features a collection of hands-on Cisco Packet Tracer projects that reflect my growth, skills, and practical experience as I progress on my journey to becoming a network engineer.
+This repository features a collection of hands-on Cisco Packet Tracer Labs that I have followed along with Jeremy's IT Lab YouTube course.
 
 # ALL OF THESE LABS BELONG TO JEREMY'S IT LAB. THESE ARE LABS THAT I HAVE FOLLOWED ALONG WITH FROM HIS YOUTUBE VIDEOS THAT CAN BE FOUND via URL: 
 	
